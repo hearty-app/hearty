@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-5xOo/7DU2HcFq382tV71ZxALkksS0wX+fEAp1xkl3do=' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'unsafe-inline'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Hearty check</title>
+<style>
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;box-sizing:border-box;background:#FFF6F3;color:#151C4B;font:16px/1.5 -apple-system,system-ui,sans-serif;text-align:center}
+h1{font-size:22px;margin:0}
+p{margin:0;color:#5C6484;max-width:320px}
+@media (prefers-color-scheme:dark){body{background:#0E1440;color:#F3F1FF}p{color:#AEB4D0}}
+</style>
+</head>
+<body>
+<h1>Quick check</h1>
+<p id="note">This makes sure a person, not a script, is asking Hearty to send a sign-in code.</p>
+<div id="box"></div>
+<script>
+(function () {
+  var key = new URLSearchParams(location.search).get('k') || '';
+  var note = document.getElementById('note');
+  // only ever a Turnstile site key, never anything that ends up as markup
+  if (!/^[0-9A-Za-z_-]{10,80}$/.test(key)) { note.textContent = 'This check link is incomplete.'; return; }
+  window.onTurnstileLoad = function () {
+    turnstile.render('#box', {
+      sitekey: key,
+      // the only place a token ever goes: back to the app that asked
+      callback: function (token) { location.replace('hearty://captcha?token=' + encodeURIComponent(token)); },
+      'error-callback': function () { note.textContent = 'The check could not load. Close this and try again.'; },
+      'expired-callback': function () { note.textContent = 'That took too long. Close this and try again.'; },
+    });
+  };
+  var s = document.createElement('script');
+  s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad&render=explicit';
+  s.async = true;
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
