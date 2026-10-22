@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-5xOo/7DU2HcFq382tV71ZxALkksS0wX+fEAp1xkl3do=' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'unsafe-inline'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-1NDWhztPKzhC4N7Sj8r0AIb7lsMwjmjJc2j02pNQPEw=' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'unsafe-inline'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex">
 <title>Hearty check</title>
@@ -20,10 +20,11 @@ p{margin:0;color:#5C6484;max-width:320px}
 <div id="box"></div>
 <script>
 (function () {
-  var key = new URLSearchParams(location.search).get('k') || '';
+  // Hearty's own site key, written in rather than read from the link, so the
+  // page can only ever run Hearty's check. Older builds still add ?k=; it is
+  // ignored.
+  var key = '0x4AAAAAAFUFIrBEfVhkae2e';
   var note = document.getElementById('note');
-  // only ever a Turnstile site key, never anything that ends up as markup
-  if (!/^[0-9A-Za-z_-]{10,80}$/.test(key)) { note.textContent = 'This check link is incomplete.'; return; }
   window.onTurnstileLoad = function () {
     turnstile.render('#box', {
       sitekey: key,
