@@ -28,6 +28,11 @@ nav a{text-decoration:none;font-weight:600}
 .screen img{display:block;width:100%;height:100%;max-width:100%;object-fit:cover}
 .shot figcaption{margin-top:12px;font-size:14.5px;line-height:1.45;color:var(--muted)}
 .shot figcaption b{display:block;color:var(--ink);font-size:15.5px;margin-bottom:2px}
+.moods{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:14px;margin:22px 0 8px}
+.mood{margin:0;text-align:center;min-width:0;background:#eeeafc;border-radius:18px;padding:12px 8px 14px;border-bottom:5px solid #cfc6f2}
+.mood img{width:100%;max-width:130px;height:auto;aspect-ratio:1;object-fit:contain}
+.mood figcaption{margin-top:6px;font-size:13.5px;line-height:1.4;color:#5b5680}
+.mood figcaption b{display:block;color:#241f4d;font-size:15.5px}
 .fine{font-size:13.5px;color:var(--muted);margin-top:14px}
 footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
 </style>
@@ -37,11 +42,13 @@ footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
 <nav><a href="index.html">Hearty</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
 <div class="card">
 <h1>Hearty — Privacy Policy</h1>
-<p class="updated">Last updated: 30 September 2026</p>
+<p class="updated">Last updated: 27 October 2026</p>
 <h2>The short version</h2>
-<p>Hearty keeps everything on your phone. Nothing is sent anywhere unless you turn on backup — and backup is off until you choose it.</p>
+<p>Hearty keeps everything on your phone. Nothing is sent anywhere unless you turn on backup, or open Hearty Pro to see or buy a subscription — and both are your choice.</p>
 <h2>What Hearty stores on your phone</h2>
 <ul><li><strong>About you</strong> — your name, optionally a last name, your age, height, weight, gender, and the kind of work day you have. Optionally a profile photo, which stays in the app's own folder on the phone.</li><li><strong>What you log</strong> — steps, water, meals, mindfulness minutes, sleep times, workouts and lifting sets, weigh-ins, food entries, and pulse checks you count yourself. Sleep may come from your own entry or, if you connect it, from Apple Health.</li><li><strong>Your progress</strong> — XP, level, heart health, goals, reminder times, and whether you prefer dark mode.</li></ul>
+<h2>Two dates that stay after you delete Hearty</h2>
+<p>Hearty keeps two dates in your iPhone's secure storage (the Keychain): when your free trial began, and the latest date Hearty was opened. Unlike everything else, these stay on your iPhone if you delete the app, so that reinstalling doesn't start a second free trial. They are never sent anywhere, never included in a backup, and never copied to iCloud. Nothing else about you is kept this way.</p>
 <h2>If you turn on backup</h2>
 <p>Backup is optional and off until you sign in. It exists so that a new phone, or a reinstall, can get your history back.</p>
 <p>When you sign in, we email a code to the address you give us to check the account is yours. That address is stored so you can sign back in later.</p>
@@ -50,9 +57,14 @@ footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
 <p><strong>Sleep is different.</strong> If Apple Health has a night your watch or phone recorded, Hearty saves it the same way it saves a night you logged by hand — so once it is in your history it is part of a backup like everything else.</p>
 <p>Nothing is sent automatically, on a schedule, or in the background. A backup happens only when you ask for one.</p>
 <p><strong>Deleting your account</strong>, from the same screen, erases your backup and your email address from the server. That cannot be undone.</p>
-<h2>If you do not turn on backup</h2>
-<p>Then nothing leaves your phone at all. Hearty contains no analytics, advertising, tracking or third-party data-collection software of any kind, and makes no other network requests with your data.</p>
-<p>In that case Hearty has no copy of anything. Deleting the app erases everything, permanently, with no way to recover it.</p>
+<h2>If you open Hearty Pro or subscribe</h2>
+<p>Hearty Pro is sold through the App Store. Apple takes the payment, and Hearty never sees your card details or your Apple ID.</p>
+<p>To know whether you subscribe, Hearty uses <strong>RevenueCat</strong>, a service that checks App Store purchases. Hearty contacts it only while the Hearty Pro screen is open, and, while you subscribe, when the app starts, so that renewals and cancellations are kept in step.</p>
+<p>What RevenueCat receives: a random identifier it creates for this install of Hearty, the App Store's record of your Hearty purchases, and the basic details any app's request carries — your device model, iOS version, Hearty's version, your App Store country and your IP address.</p>
+<p>It never receives your name, your email address, your health data, or anything you log in Hearty, and it is not linked to a backup account.</p>
+<h2>If you do neither</h2>
+<p>Then nothing leaves your phone at all. Hearty contains no analytics, advertising or tracking software of any kind, and makes no other network requests with your data.</p>
+<p>In that case Hearty has no copy of anything. Deleting the app erases everything except the two dates above, permanently, with no way to recover it.</p>
 <h2>Health data</h2>
 <p>Health and fitness data is used only to show you your own progress. It is never used for advertising or marketing, never sold, and never shared with anyone.</p>
 <h2>Permissions Hearty asks for</h2>
