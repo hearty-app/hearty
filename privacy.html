@@ -14,13 +14,13 @@
 @font-face{font-family:Jakarta;src:url(fonts/PlusJakartaSans_800ExtraBold.ttf) format("truetype");font-weight:800;font-display:swap}
 :root{
   --sky1:#8FD3FF;--sky2:#C9EAFF;--sky3:#EEF8FF;
-  --card:#fff;--ink:#151C4B;--muted:#4D5680;--accent:#7444D8;--accent2:#9B6BF0;--accentDeep:#6A3CC8;
-  --side:rgba(21,28,75,.12);--depth:rgba(21,28,75,.24);--grass:#6CCB5F;--grassDeep:#45A84F;--soil:#A8714A;
-  --chip:rgba(255,255,255,.85);--mood:#EEEAFC;--moodEdge:#CFC6F2;--shadow:0 12px 28px rgba(21,28,75,.14);
+  --card:#fff;--ink:#151C4B;--muted:#4D5680;--accent:#7444D8;--accent2:#7444D8;--accentDeep:#5229B0;
+  --side:rgba(21,28,75,.12);--depth:rgba(21,28,75,.24);--grass:#6CCB5F;--grassDeep:#45A84F;--soil:#7E5233;
+  --chip:rgba(255,255,255,.85);--mood:#EEEAFC;--moodEdge:#CFC6F2;--shadow:0 12px 28px rgba(0,0,0,.12);
 }
 @media(prefers-color-scheme:dark){:root{
   --sky1:#0C1035;--sky2:#171D58;--sky3:#262C6E;
-  --card:#1C2150;--ink:#EEF0FF;--muted:#B4B9E0;--accent:#C3A8FF;--accent2:#9B6BF0;--accentDeep:#6A3CC8;
+  --card:#1C2150;--ink:#EEF0FF;--muted:#B4B9E0;--accent:#C3A8FF;--accent2:#7444D8;--accentDeep:#5229B0;
   --side:rgba(255,255,255,.08);--depth:rgba(0,0,0,.42);--grass:#3E9157;--grassDeep:#2C6E42;--soil:#5E4033;
   --chip:rgba(28,33,80,.88);--mood:#262C66;--moodEdge:#171C4A;--shadow:0 12px 28px rgba(0,0,0,.35);
 }}
@@ -52,7 +52,7 @@ main{flex:1;width:100%;max-width:980px;margin:0 auto;padding:18px 18px 56px}
 .card{background:var(--card);border:2px solid var(--side);border-top:10px solid var(--grass);border-bottom:8px solid var(--depth);border-radius:18px;padding:30px 28px;box-shadow:var(--shadow)}
 h1{font:clamp(17px,3.6vw,24px)/1.55 Pixel,monospace;margin:0 0 12px;letter-spacing:.5px}
 h2{font-weight:800;font-size:21px;line-height:1.3;margin:34px 0 8px}
-h3{font-weight:800;font-size:18px;margin:0 0 6px}
+h3,.cardtitle{font-weight:800;font-size:18px;line-height:1.35;margin:0 0 6px}
 p,li{color:var(--ink)}
 .updated{color:var(--muted);font-size:15.5px;margin:0 0 10px}
 ul{padding-left:22px}li{margin:8px 0}
@@ -62,12 +62,12 @@ strong{font-weight:800}
 .btn:active{transform:translateY(3px);border-bottom-width:3px}
 /* the front page */
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:20px 0 34px}
-.hero h1{font-size:clamp(30px,7vw,52px);line-height:1.25;margin:0 0 16px;text-shadow:0 4px 0 rgba(21,28,75,.12)}
+.hero h1{font-size:clamp(30px,7vw,52px);line-height:1.25;margin:0 0 16px;text-shadow:0 4px 0 rgba(0,0,0,.12)}
 .hero .tag{font-size:clamp(18px,2.4vw,21px);font-weight:700;line-height:1.5;margin:0 0 22px;max-width:30ch}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .hero .soon{margin:18px 0 0;font-size:14.5px;color:var(--muted);font-weight:700}
 .hero figure{margin:0;text-align:center}
-.hero figure img{width:min(100%,380px);filter:drop-shadow(0 18px 18px rgba(21,28,75,.18));animation:bob 3.2s ease-in-out infinite}
+.hero figure img{width:min(100%,380px);filter:drop-shadow(0 18px 18px rgba(0,0,0,.16));animation:bob 3.2s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-12px)}}
 @media(prefers-reduced-motion:reduce){.hero figure img{animation:none}}
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -83,7 +83,7 @@ strong{font-weight:800}
 /* screenshots, in a phone */
 .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:30px 24px;margin:22px 0 8px}
 .shot{margin:0;text-align:center;min-width:0}
-.phone{position:relative;border:solid #14151c;border-width:27px 9px 13px;border-radius:38px;background:#14151c;box-shadow:0 14px 30px rgba(21,28,75,.22)}
+.phone{position:relative;border:solid #14151c;border-width:27px 9px 13px;border-radius:38px;background:#14151c;box-shadow:0 14px 30px rgba(0,0,0,.22)}
 .phone::before{content:"";position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:34%;height:12px;border-radius:8px;background:#05060a}
 .screen{overflow:hidden;border-radius:22px;aspect-ratio:390/844;background:#fff}
 .screen img{display:block;width:100%;height:100%;max-width:100%;object-fit:cover}
