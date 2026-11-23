@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>How many steps a day do you really need? | Hearty</title>
+<meta name="description" content="10,000 steps is the famous number, but the research says the benefit levels off earlier, and where depends on your age.">
+<link rel="canonical" href="https://gethearty.app/blog/how-many-steps-a-day.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How many steps a day do you really need? | Hearty">
+<meta property="og:description" content="10,000 steps is the famous number, but the research says the benefit levels off earlier, and where depends on your age.">
+<meta property="og:url" content="https://gethearty.app/blog/how-many-steps-a-day.html">
+<meta property="og:image" content="https://gethearty.app/screens/hero-heart.webp">
+<link rel="icon" href="../screens/hero-heart.webp">
+<style>
+@font-face{font-family:Pixel;src:url(../fonts/PressStart2P_400Regular.ttf) format("truetype");font-display:swap}
+@font-face{font-family:Jakarta;src:url(../fonts/PlusJakartaSans_500Medium.ttf) format("truetype");font-weight:500;font-display:swap}
+@font-face{font-family:Jakarta;src:url(../fonts/PlusJakartaSans_700Bold.ttf) format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:Jakarta;src:url(../fonts/PlusJakartaSans_800ExtraBold.ttf) format("truetype");font-weight:800;font-display:swap}
+:root{
+  --sky1:#8FD3FF;--sky2:#C9EAFF;--sky3:#EEF8FF;
+  --card:#fff;--ink:#151C4B;--muted:#4D5680;--accent:#7444D8;--accent2:#7444D8;--accentDeep:#5229B0;
+  --side:rgba(21,28,75,.12);--depth:rgba(21,28,75,.24);--grass:#6CCB5F;--grassDeep:#45A84F;--soil:#7E5233;
+  --chip:rgba(255,255,255,.85);--mood:#EEEAFC;--moodEdge:#CFC6F2;--shadow:0 12px 28px rgba(0,0,0,.12);
+}
+@media(prefers-color-scheme:dark){:root{
+  --sky1:#0C1035;--sky2:#171D58;--sky3:#262C6E;
+  --card:#1C2150;--ink:#EEF0FF;--muted:#B4B9E0;--accent:#C3A8FF;--accent2:#7444D8;--accentDeep:#5229B0;
+  --side:rgba(255,255,255,.08);--depth:rgba(0,0,0,.42);--grass:#3E9157;--grassDeep:#2C6E42;--soil:#5E4033;
+  --chip:rgba(28,33,80,.88);--mood:#262C66;--moodEdge:#171C4A;--shadow:0 12px 28px rgba(0,0,0,.35);
+}}
+*{box-sizing:border-box}
+html{background:var(--sky3)}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;color:var(--ink);
+  font:500 17px/1.65 Jakarta,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--sky1) 0,var(--sky2) 380px,var(--sky3) 900px) no-repeat,var(--sky3)}
+@media(prefers-color-scheme:dark){body{background:
+  radial-gradient(1.5px 1.5px at 12% 8%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 78% 5%,#fff 50%,transparent 51%),
+  radial-gradient(1px 1px at 33% 18%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 90% 22%,#fff 50%,transparent 51%),
+  radial-gradient(1px 1px at 55% 11%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 6% 30%,#fff 50%,transparent 51%),
+  radial-gradient(1px 1px at 66% 34%,#fff 50%,transparent 51%),
+  linear-gradient(180deg,var(--sky1) 0,var(--sky2) 420px,var(--sky3) 1000px) no-repeat,var(--sky3)}}
+a{color:var(--accent);font-weight:700;text-underline-offset:3px}
+img{max-width:100%}
+.wrap{width:100%;max-width:980px;margin:0 auto;padding:0 18px}
+/* the header: the heart and the name in the app's pixel face, the pages as block tabs */
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 18px 8px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand span{font:16px Pixel,monospace;letter-spacing:1px}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav a{font-size:14px;text-decoration:none;color:var(--ink);background:var(--chip);padding:7px 13px;border-radius:12px;border:1px solid var(--side);border-bottom:4px solid var(--depth)}
+nav a[aria-current]{background:var(--accent2);color:#fff;border-color:transparent;border-bottom-color:var(--accentDeep)}
+main{flex:1;width:100%;max-width:980px;margin:0 auto;padding:18px 18px 56px}
+.narrow{max-width:760px;margin:0 auto}
+/* every box is a raised block with a grass top, as on the app's Home */
+.card{background:var(--card);border:2px solid var(--side);border-top:10px solid var(--grass);border-bottom:8px solid var(--depth);border-radius:18px;padding:30px 28px;box-shadow:var(--shadow)}
+h1{font:clamp(17px,3.6vw,24px)/1.55 Pixel,monospace;margin:0 0 12px;letter-spacing:.5px}
+h2{font-weight:800;font-size:21px;line-height:1.3;margin:34px 0 8px}
+h3,.cardtitle{font-weight:800;font-size:18px;line-height:1.35;margin:0 0 6px}
+p,li{color:var(--ink)}
+.updated{color:var(--muted);font-size:15.5px;margin:0 0 10px}
+ul{padding-left:22px}li{margin:8px 0}
+strong{font-weight:800}
+.btn{display:inline-block;text-decoration:none;font-weight:800;font-size:16px;color:#fff;background:var(--accent2);padding:13px 22px;border-radius:14px;border-bottom:6px solid var(--accentDeep)}
+.btn.ghost{background:var(--card);color:var(--ink);border:2px solid var(--side);border-bottom:6px solid var(--depth)}
+.btn:active{transform:translateY(3px);border-bottom-width:3px}
+/* the front page */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:20px 0 34px}
+.hero h1{font-size:clamp(30px,7vw,52px);line-height:1.25;margin:0 0 16px;text-shadow:0 4px 0 rgba(0,0,0,.12)}
+.hero .tag{font-size:clamp(18px,2.4vw,21px);font-weight:700;line-height:1.5;margin:0 0 22px;max-width:30ch}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .soon{margin:18px 0 0;font-size:14.5px;color:var(--muted);font-weight:700}
+.hero figure{margin:0;text-align:center}
+.hero figure img{width:min(100%,380px);filter:drop-shadow(0 18px 18px rgba(0,0,0,.16));animation:bob 3.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px)}}
+@media(prefers-reduced-motion:reduce){.hero figure img{animation:none}}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.trio .card{padding:24px 22px}
+.trio .card p{margin:0;color:var(--muted)}
+.icon{font:13px Pixel,monospace;color:var(--accent);margin-bottom:12px;display:block;letter-spacing:.5px}
+.strip{display:flex;justify-content:center;gap:6px;margin:14px 0 0;flex-wrap:wrap}
+.strip img{width:56px;height:56px;object-fit:contain}
+.section-title{font:clamp(15px,3vw,20px)/1.5 Pixel,monospace;text-align:center;margin:50px 0 8px}
+.section-sub{text-align:center;color:var(--muted);margin:0 0 20px}
+.more{text-align:center;margin-top:28px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;text-align:center}.hero .tag{margin-left:auto;margin-right:auto}.hero .ctas{justify-content:center}.hero figure{order:-1}.hero figure img{width:min(70%,280px)}.trio{grid-template-columns:1fr}.card{padding:24px 20px}}
+/* screenshots, in a phone */
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:30px 24px;margin:22px 0 8px}
+.shot{margin:0;text-align:center;min-width:0}
+.phone{position:relative;border:solid #14151c;border-width:27px 9px 13px;border-radius:38px;background:#14151c;box-shadow:0 14px 30px rgba(0,0,0,.22)}
+.phone::before{content:"";position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:34%;height:12px;border-radius:8px;background:#05060a}
+.screen{overflow:hidden;border-radius:22px;aspect-ratio:390/844;background:#fff}
+.screen img{display:block;width:100%;height:100%;max-width:100%;object-fit:cover}
+.shot figcaption{margin-top:12px;font-size:14.5px;line-height:1.45;color:var(--muted)}
+.shot figcaption b{display:block;color:var(--ink);font-size:15.5px;margin-bottom:2px;font-weight:800}
+.moods{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:14px;margin:22px 0 8px}
+.mood{margin:0;text-align:center;min-width:0;background:var(--mood);border-radius:16px;padding:12px 8px 14px;border-bottom:6px solid var(--moodEdge)}
+.mood img{width:100%;max-width:130px;height:auto;aspect-ratio:1;object-fit:contain}
+.mood figcaption{margin-top:6px;font-size:13.5px;line-height:1.4;color:var(--muted)}
+.mood figcaption b{display:block;color:var(--ink);font-size:15.5px;font-weight:800}
+.fine{font-size:13.5px;color:var(--muted);margin-top:14px}
+/* the blog: a list of posts, and the box each one ends with */
+.posts{list-style:none;padding:0;margin:22px 0 0}
+.post{margin:0 0 22px;padding:0 0 20px;border-bottom:2px solid var(--side)}
+.post:last-child{border-bottom:0}
+.post a{font-size:19px;font-weight:800;text-decoration:none}
+.post .updated{display:block;margin:2px 0 4px}
+.post p{margin:0;color:var(--muted)}
+.postend{margin-top:30px;padding:20px 22px;background:var(--mood);border-radius:16px;border-bottom:6px solid var(--moodEdge)}
+.postend p{margin:0 0 12px}.postend p:last-child{margin:0}
+/* the ground the page stands on: grass over blocks of soil */
+footer{margin-top:auto;background-color:var(--soil);border-top:14px solid var(--grass);box-shadow:inset 0 6px 0 var(--grassDeep);color:#FFF4E6;
+  background-image:linear-gradient(90deg,rgba(0,0,0,.09) 2px,transparent 2px),linear-gradient(rgba(0,0,0,.09) 2px,transparent 2px);background-size:28px 28px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:22px;padding-bottom:26px;font-size:14.5px}
+footer a{color:#FFF4E6}
+footer .links{display:flex;gap:16px;flex-wrap:wrap}
+footer .name{font:12px Pixel,monospace;letter-spacing:1px}
+</style>
+</head>
+<body>
+<header class="wrap top">
+<a class="brand" href="../index.html"><img src="../screens/hero-heart.webp" alt="" width="40" height="40"><span>HEARTY</span></a>
+<nav aria-label="Pages"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../blog/index.html" aria-current="page">Blog</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a></nav>
+</header>
+<main>
+<div class="narrow"><div class="card">
+<h1>How many steps a day do you really need?</h1>
+<p class="updated">November 23, 2026</p>
+<p>Ten thousand steps a day is the number everyone knows. It makes a good round target, but it isn't where the research draws the line. The studies point to something more useful: the benefit of walking keeps growing as you add steps, then levels off, and where it levels off depends on how old you are.</p>
+<h2>The benefit levels off, and earlier than 10,000 for most adults</h2>
+<p>The biggest study so far pooled 15 studies of about 47,000 adults. The risk of dying early fell as daily steps rose, then levelled off at about <strong>6,000 to 8,000 steps for adults 60 and over</strong> and <strong>8,000 to 10,000 for younger adults</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/?term=Daily%20steps%20and%20all-cause%20mortality%3A%20a%20meta-analysis%20of%2015%20international%20cohorts">Paluch et al., The Lancet Public Health, 2022</a>).</p>
+<p>So if you're 65 and walking 7,000 steps a day, you're already getting most of what walking has to offer. If you're 30, it's worth aiming a little higher.</p>
+<h2>Every thousand steps counts, from about 4,000</h2>
+<p>You don't have to reach a big number before walking starts doing you good. A 2023 review of 17 studies and about 227,000 people found benefits starting at around <strong>4,000 steps a day</strong>, with each extra 1,000 steps linked to a <strong>15% lower risk of death</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/?term=The%20association%20between%20daily%20step%20count%20and%20all-cause%20and%20cardiovascular%20mortality%3A%20a%20meta-analysis">Banach et al., European Journal of Preventive Cardiology, 2023</a>).</p>
+<p>Among about 4,800 US adults followed for a decade, <strong>8,000 steps a day was linked to half the risk of death of 4,000</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/?term=Association%20of%20Daily%20Step%20Count%20and%20Step%20Intensity%20With%20Mortality%20Among%20US%20Adults">Saint-Maurice et al., JAMA, 2020</a>).</p>
+<h2>Under 5,000 is a sedentary day</h2>
+<p>Fewer than <strong>5,000 steps a day</strong> is the widely used marker of a sedentary lifestyle (<a href="https://pubmed.ncbi.nlm.nih.gov/?term=A%20step-defined%20sedentary%20lifestyle%20index%3A%20%3C5000%20steps%2Fday">Tudor-Locke et al., Applied Physiology, Nutrition, and Metabolism, 2013</a>). If that's where your days usually land, getting above it is the first goal worth having.</p>
+<h2>Teens need more</h2>
+<p>For teenagers, roughly <strong>10,000 to 12,000 steps a day</strong> lines up with the recommended hour of moderate-to-vigorous activity (<a href="https://pubmed.ncbi.nlm.nih.gov/?term=How%20many%20steps%2Fday%20are%20enough%3F%20for%20children%20and%20adolescents">Tudor-Locke et al., International Journal of Behavioral Nutrition and Physical Activity, 2011</a>).</p>
+<h2>So what number should you pick?</h2>
+<ul><li><strong>Under 18:</strong> about 10,000 to 12,000.</li><li><strong>18 to 59:</strong> about 8,000 to 10,000.</li><li><strong>60 and over:</strong> about 6,000 to 8,000.</li><li><strong>Walking under 5,000 now?</strong> Start by getting past it. Every 1,000 you add counts.</li></ul>
+<p>A goal you hit most days does more than a bigger one you keep missing. Pick the number for your age, and raise it once it feels easy.</p>
+<div class="postend"><p><strong>Hearty</strong> turns these into five small daily goals (steps, water, sleep, a healthy meal and a mindful moment) and a heart built from blocks that grows healthier as you keep them.</p><p><a class="btn" href="../about.html">See how Hearty works</a></p></div>
+<p class="fine">General information from public health research, not medical advice. If you have a health condition, ask your doctor what's right for you.</p>
+</div></div>
+</main>
+<footer><div class="wrap"><span class="name">HEARTY</span><span class="links"><a href="../about.html">About</a><a href="../blog/index.html">Blog</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a><a href="mailto:hearty.app.official@gmail.com">hearty.app.official@gmail.com</a></span></div></footer>
+</body>
+</html>

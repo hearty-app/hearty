@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /verify.html
+Sitemap: https://gethearty.app/sitemap.xml
